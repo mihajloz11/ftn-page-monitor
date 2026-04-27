@@ -1,0 +1,29 @@
+name: FTN page monitor
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check page
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python3 site-update-monitor/monitor_site.py --config site-update-monitor/config.github.json
+
+      - name: Save latest state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site-update-monitor/.cloud-state.json
+          git diff --cached --quiet || git commit -m "Update FTN page monitor state"
+          git push

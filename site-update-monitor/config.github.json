@@ -1,0 +1,27 @@
+{
+  "url": "https://www.elektronika.ftn.uns.ac.rs/digitalni-sistemi-otporni-na-greske/specifikacija/specifikacija-predmeta/",
+  "state_file": ".cloud-state.json",
+  "timeout_seconds": 30,
+  "user_agent": "site-update-monitor/1.0 GitHubActions",
+  "windows_notification": {
+    "enabled": false,
+    "title": "FTN stranica je promenjena"
+  },
+  "ntfy": {
+    "enabled": true,
+    "server": "https://ntfy.sh",
+    "topic_env": "NTFY_TOPIC",
+    "title": "FTN stranica je promenjena",
+    "tags": "warning"
+  },
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.gmail.com",
+    "smtp_port": 587,
+    "smtp_username": "",
+    "smtp_password": "",
+    "from": "",
+    "to": "",
+    "subject": "Promena na FTN stranici"
+  }
+}
