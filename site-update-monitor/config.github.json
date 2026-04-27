@@ -10,6 +10,7 @@
   "ntfy": {
     "enabled": true,
     "server": "https://ntfy.sh",
+    "topic": "ftn-page-monitor-mihajloz11-18797c23455be66e1d70b2a1",
     "topic_env": "NTFY_TOPIC",
     "title": "FTN stranica je promenjena",
     "tags": "warning"

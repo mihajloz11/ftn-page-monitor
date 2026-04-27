@@ -71,7 +71,7 @@ Najjednostavnije obavestenje je preko ntfy:
 1. Instaliraj ntfy aplikaciju ili otvori https://ntfy.sh u browseru.
 2. Izmisli dugacak privatni naziv topic-a, npr. `ftn-dsog-nekidugacaknasumicantekst`.
 3. Pretplati se na taj topic u ntfy aplikaciji.
-4. Na GitHub repo-u dodaj secret `NTFY_TOPIC` sa tom vrednoscu.
+4. Topic je vec upisan u `config.github.json`, pa GitHub secret nije obavezan za ovu jednostavnu varijantu.
 5. Pushuj ovaj folder na GitHub.
 
 Workflow se pokrece na svakih 30 minuta i mozes ga rucno pokrenuti kroz GitHub Actions tab.
